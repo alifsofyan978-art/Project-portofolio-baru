@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Raider - Profil Portofolio</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <!-- Berikan id="theme-style" agar bisa diubah lewat JavaScript -->
+    <link rel="stylesheet" href="style.css" id="theme-style">
+</head>
+<body class="dark-mode">
+
+    <!-- 1. Bagian Header (Top Bar) -->
+    <header class="header">
+        <div class="header-logo">Night Raiders</div>
+        <nav class="header-nav">
+            <a href="#beranda" class="active">Beranda</a>
+            <a href="#keahlian" class="active">Keahlian</a>
+            <a href="#kontak" class="active">Kontak</a>
+            <a href="#proyek" class="active">Proyek</a>
+        </nav>
+        <!-- Ikon bulan/matahari bisa diklik untuk ganti tema -->
+        <div class="header-icon" id="theme-toggle" style="cursor: pointer;" title="Ganti Mode Terang/Gelap">☽</div>
+    </header>
+
+    <!-- 2. Bagian Hero (Banner) -->
+    <section id="beranda" class="hero">
+        <div class="profile-pic-container">
+            <img src="images 2.jpg" alt="Foto Alif Sofwan Wibowo" class="profile-pic">
+        </div>
+        <div class="hero-info">
+            <h1>Alif Sofwan Wibowo</h1>
+            <p>Mahasiswa Informatika</p>
+            <p>Saya adalah seorang mahasiswa informatika yang tertarik dengan teknologi dan kreatif.</p>
+        </div>
+    </section>
+
+    <!-- 3. Bagian Konten Utama -->
+    <section class="main-content">
+        
+        <!-- Keahlian -->
+        <section id="keahlian">
+            <div class="section-title">Keahlian</div>
+            <div class="skills-container">
+            <span class="skill-tag">Video Editing</span>
+            <span class="skill-tag">Desain Grafis</span>
+            <span class="skill-tag">Ms. Office</span>
+            </div>
+            <div class="section-title">Hobi</div>
+            <div class="skills-container">
+            <span class="skill-tag">Videografi</span>
+            <span class="skill-tag">Fotografi</span>
+            <span class="skill-tag">Dengar Musik</span>
+            </div>
+        </section>
+            
+        <!-- Proyek -->  
+         <section id ="proyek" class="proyek-section">
+            <h2 class="section-title">Proyek</h2>
+            <div id="proyek-container"></div> 
+
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak">
+            <div class="section-title">Kontak</div>
+            <form class="contact-form" id="contactForm">
+                <input type="text" id="namaInput" class="contact-input" placeholder="Masukkan nama Anda" required>
+                <button type="submit" class="contact-button">Kirim</button>
+            </form>
+        </section>
+    </section>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', function() {
+            // Cek apakah sedang mode gelap atau terang
+            if (body.classList.contains('dark-mode')) {
+                body.classList.replace('dark-mode', 'light-mode');
+                themeToggle.textContent = '☼'; // Ubah ikon jadi matahari
+            } else {
+                body.classList.replace('light-mode', 'dark-mode');
+                themeToggle.textContent = '☽'; // Ubah ikon jadi bulan
+            }
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Pesan berhasil "dikirim"! (baca, jangan cuma read)');
+            this.reset();
+        });
+    </script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

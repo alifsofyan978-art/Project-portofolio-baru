@@ -1,0 +1,315 @@
+/* --- CSS Reset & Dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Biar transisi warnanya halus */
+}
+
+/* --- Pengaturan Tema Gelap (Default) --- */
+body.dark-mode {
+    background-color: #121214;
+    color: #e0e0e0;
+}
+
+body.dark-mode .header {
+    background-color: #1a1a1d;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .header-logo,
+body.dark-mode .header-nav a,
+body.dark-mode .section-title,
+body.dark-mode .hero-info h1 {
+    color: #fff;
+}
+
+body.dark-mode .header-nav {
+    color: #b0b0b0;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(to right, #1a1c3a, #673ab7);
+}
+
+body.dark-mode .hero-info p {
+    color: #d1c4e9;
+}
+
+body.dark-mode .skill-tag,
+body.dark-mode .contact-input {
+    background-color: #212124;
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+
+/* --- Pengaturan Tema Terang (Putih) --- */
+body.light-mode {
+    background-color: #f4f4f9;
+    color: #333333;
+}
+
+body.light-mode .header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+body.light-mode .header-logo,
+body.light-mode .header-nav a,
+body.light-mode .section-title,
+body.light-mode .hero-info h1 {
+    color: #111111;
+}
+
+body.light-mode .header-nav {
+    color: #666666;
+}
+
+body.light-mode .hero {
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradien biru cerah untuk mode terang */
+}
+
+body.light-mode .hero-info p {
+    color: #222222;
+}
+
+body.light-mode .skill-tag,
+body.light-mode .contact-input {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #ccc;
+}
+
+body.light-mode .profile-pic-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+/* --- Style Umum Komponen Lainnya --- */
+.header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.header-nav {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-nav a.active {
+    font-weight: 600;
+}
+
+.header-icon {
+    font-size: 1.2rem;
+}
+
+.hero {
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-pic-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.profile-pic-text {
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 3px 6px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.hero-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.hero-info p {
+    font-size: 1rem;
+}
+
+.main-content {
+    padding: 30px 20px;
+}
+
+.proyek-section {
+    padding: 0 20px 30px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.skill-tag {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+#proyek-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    gap: 15px !important;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Kotak kartu proyek */
+.project-card {
+    width: 84% !important;
+    justify-self: center;
+    overflow: hidden;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+    background-color: #1a1a1d;
+    border: 1px solid #333;
+}
+
+.project-card img, .project-img {
+    width: 94% !important;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+    object-fit: cover;
+    background-color: #242428;
+    border-radius: 0 !important;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-card h3 {
+    margin: 0 0 8px !important;
+    color: #fff;
+    text-align: center;
+}
+
+.project-card p {
+    margin: 0;
+    color: #b0b0b0;
+    font-size: 14px !important;
+    text-align: center;
+}
+
+body.light-mode .project-card {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+body.light-mode .project-card img,
+body.light-mode .project-img {
+    background-color: #f1f1f4;
+}
+
+body.light-mode .project-card h3 {
+    color: #111;
+}
+
+body.light-mode .project-card p {
+    color: #666;
+}
+
+.contact-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-input {
+    padding: 12px 15px;
+    border-radius: 6px;
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.contact-input::placeholder {
+    color: #888;
+}
+
+.contact-button {
+    background-color: #512da8;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #673ab7;
+}
+
+/* --- Responsif untuk HP --- */
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .profile-pic-container {
+        margin: 0 auto 15px auto;
+    }
+    
+    .profile-pic-text {
+        left: 10px;
+        top: -5px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+    }
+    
+    .contact-input {
+        width: 100%;
+    }
+}
